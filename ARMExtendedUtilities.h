@@ -9,7 +9,12 @@ void SetSeriesLOW(volatile unsigned long int *port,int start,int end){
 		*port &= ~BV(x);
 	}
 }
-void delay(int time){
-	for(int x=0;x<=time;x++)
-		for(int y=0;y<=x;y++);
+void delay(int x){
+	int a;
+	a=x*3000;
+	for(int b=0;b<a;b++);
 }
+struct gpio_pin{
+			int port;
+			int pin;
+		};
